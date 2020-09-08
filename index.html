@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script type="text/babel">
+        class App extends React.Component {
+            state = {
+                name: "Shirley",
+                age: 25
+            }
+
+            handleChange=(e)=>{
+                //console.log(e.target.value)
+                this.setState({
+                    name: e.target.value
+                })
+            }
+
+            handleSubmit = (e) => {
+                e.preventDefault(); //prevents reloading of pge when you hit submit
+                console.log("Form subitted by: ", this.state.name)
+            }
+
+
+
+            render(){
+                return(
+                    //We can't use class here as it's reserver keyword so wee need to use className
+                    <div className="app-content">
+                        <h1>Hey {this.state.name}</h1>
+                        <form onSubmit={this.handleSubmit}>
+                            <input type="text" onChange={this.handleChange}/>
+                            <button>Submit</button>
+                        </form>
+                    </div>
+                    //<!--Here we have not put the function like handleClick() [it get executed when the page load itself] bcoz we want the fun to get executed only when it's clicled. -->
+                    //jsx template
+                )
+            }
+        }
+
+        ReactDOM.render(<App />, document.getElementById("app")); // first param is the component
+    </script>
+    
+</body>
+</html>
