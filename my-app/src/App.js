@@ -1,5 +1,6 @@
 import React from 'react';
 import Ninjas from './Ninjas'   //Importing that js file 
+import AddNinja from './AddNinja'
 
 function App (){
   
@@ -15,6 +16,7 @@ function App (){
        <h1>My first react app</h1>
        <p>Welcome onto the board :) sudi</p>
        <Ninjas ninjas={ninjas}/>
+       <AddNinja />
     </div>
   );
 }
