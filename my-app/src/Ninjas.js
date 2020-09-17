@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Ninjas (props){
+const Ninjas = (props) => {
 
     //const NinjaList = props.ninjas.map(ninja =>{
     //     if (ninja.age > 23){
@@ -23,6 +23,7 @@ function Ninjas (props){
                    <div>Name: {ninja.name}</div>
                    <div>Age: {ninja.age}</div>
                    <div>Belt: {ninja.belt}</div>
+                   <button onClick={props.deleteNinja(ninja.id)}>Delete Ninja</button>
                 </div>
         ) : null;
     })
@@ -33,9 +34,6 @@ function Ninjas (props){
         </div>
     ) 
 
-    
-
-    
-}
+     }
 
 export default Ninjas;
