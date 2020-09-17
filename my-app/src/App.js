@@ -25,7 +25,16 @@ class App extends Component{
   }
 
   deleteNinja = (id) => {
-    console.log(`You want to delete the ninja whoose id is ${id}`)
+    //console.log(`You want to delete the ninja whoose id is ${id}`)
+    //filter is an undesctructive way, it craetes a copy of the array
+    let ninjas2 = this.state.ninjas.filter(ninja=> {
+      return ninja.id !== id;
+      //If filter func returns false, it will filter out a particular elemet from the array
+    })
+
+    this.setState({
+      ninjas: ninjas2
+    })
 
   }
 
