@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Ninjas from './Ninjas'   //Importing that js file 
 import AddNinja from './AddNinja'
 
-function App (){
+class App extends Component{
   
-  state ={
+  state = {
      ninjas : [
     
     {"name":"Shirleyy", "age":"25", "belt":"none", "id":1},
@@ -13,11 +13,12 @@ function App (){
   ]
 }
 
-  let addNinja = (ninja) => {
+  addNinja = (ninja) => {
     //console.log(ninja)
 
-    let ninjas2 = [...this.state.ninjas, ninja];// spread operator
 
+    let ninjas2 = [...this.state.ninjas, ninja];// spread operator- copying the ninja array using spread operator and then adding more element into that array 'ninja'
+    console.log(ninjas2)
     ninja.id = Math.random(); //assigning an unique id 
 
     this.setState({
@@ -27,15 +28,17 @@ function App (){
 
 
   }
+
+  render(){
   
   return (
     <div className="App">
        <h1>My first react app</h1>
        <p>Welcome onto the board :) sudi</p>
-       <Ninjas ninjas={ninjas}/>
-       <AddNinja addNinja={addNinja}/> {/* passing the addNinja function as a props*/}
+       <Ninjas ninjas={this.state.ninjas}/>
+       <AddNinja addNinja={this.addNinja}/> {/* passing the addNinja function as a props*/}
     </div>
   );
+ }
 }
-
 export default App;
