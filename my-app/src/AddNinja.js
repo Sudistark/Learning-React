@@ -18,7 +18,11 @@ class AddNinja extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault(); //disallowing the page to get reload when the event is fired
-        console.log(this.state)
+        console.log(1);
+        //console.log(AddNinja;
+        console.log(2);
+        this.props.addNinja(this.state); //My problem was that I was using AddNinja instead of addNinja
+        //Here I am passwing the.state which is an object contains the name,age,belt property
     }
 
 
