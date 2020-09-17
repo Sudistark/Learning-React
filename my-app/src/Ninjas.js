@@ -23,7 +23,7 @@ const Ninjas = (props) => {
                    <div>Name: {ninja.name}</div>
                    <div>Age: {ninja.age}</div>
                    <div>Belt: {ninja.belt}</div>
-                   <button onClick={props.deleteNinja(ninja.id)}>Delete Ninja</button>
+                   <button onClick={() => {props.deleteNinja(ninja.id)}}>Delete Ninja</button>
                 </div>
         ) : null;
     })
