@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Todos from './todos'
+import AddTodo from './addForm';
+import Todos from './todos';
 
 
 class App extends Component{
@@ -11,9 +12,10 @@ class App extends Component{
   }
 
   deleteTodo = (id) =>{
-    const todoNew = this.state.todos.filter(todo => {
+    let todoNew = this.state.todos.filter(todo => {
       return todo.id !== id
     })
+
     //filter method is a non desctructive method way which creates anew aaray
     //filter if returns false for a particular id , it will remove it from the array . True to keep that elemet in the array
 
@@ -21,7 +23,19 @@ class App extends Component{
     this.setState({
       todos: todoNew
     })
-    console.log(id);
+    //console.log(id);
+
+
+  }
+
+  addTodo = (todo) => {
+    todo.id = Math.random()
+    let newTodo = [...this.state.todos, todo]
+    console.log(newTodo)
+
+    this.setState({
+      todos: newTodo
+    })
 
   }
 //state-> object and todos-> array
@@ -31,6 +45,7 @@ render(){
     <div className="todo-app container">
         <h1 className="center blue-text">Todo's</h1>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
+        <AddTodo addTodo={this.addTodo}/>
 
     </div>
 

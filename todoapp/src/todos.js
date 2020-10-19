@@ -10,11 +10,11 @@ const Todos = (props) => {
                 </div>  )
         })
     ) : (
-        <p className="center"> No todos for you</p>
+        <p className="msg center"> No todos for you</p>
     );
 
 
-    console.log(props.todos)
+    //console.log(props.todos)
     return (
         <div className="todos collection">
             {todoList}
