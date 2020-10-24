@@ -1,6 +1,10 @@
 import React from 'react';
 
-const About = () =>{
+const About = (props) =>{
+    //console.log(props);
+    setTimeout(()=>{
+        props.history.push('/about.html')
+    }, 3000)
     return(
         <div className="container">
             <h4 className="center">About Us</h4>

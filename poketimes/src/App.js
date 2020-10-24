@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar />
+        <Navbar/>
         <Route exact path='/' component={Home}/>
          {/*Had to use exact because it was loading all the 3 components in the same page one below another*/}
         <Route path='/contacts.html' component={Contact}/>
