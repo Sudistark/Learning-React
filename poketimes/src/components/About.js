@@ -1,4 +1,5 @@
 import React from 'react';
+import Rainbow from './hoc/Rainbow'
 
 const About = (props) =>{
     //console.log(props);
@@ -13,4 +14,4 @@ const About = (props) =>{
     )
 }
 
-export default About;
+export default Rainbow(About);

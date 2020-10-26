@@ -5,7 +5,7 @@ const Navbar = (props) => {
     console.log(props);
     setTimeout(()=> {
         props.history.push('/about.html');
-    },2000)
+    },5000)
     return(
         <nav className="nav-wrapper blue darken-4">
             <div className="container">
