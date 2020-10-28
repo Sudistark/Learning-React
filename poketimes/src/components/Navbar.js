@@ -2,15 +2,16 @@ import React from 'react';
 import {Link, NavLink, withRouter} from 'react-router-dom';
 
 const Navbar = (props) => {
-    console.log(props);
-    setTimeout(()=> {
-        props.history.push('/about.html');
-    },5000)
+    //console.log(props);
+    // setTimeout(()=> {
+    //     props.history.push('/about.html');
+    // },5000)
     return(
         <nav className="nav-wrapper blue darken-4">
             <div className="container">
                 <a className="brand-logo">Poke's Time</a>
                 <ul className="right">
+                    
                     <li><Link  to="/">Home</Link></li>
                     <li><NavLink to="/about.html">About Us</NavLink></li>
                     <li><NavLink to="/contacts.html">Contact Us</NavLink></li>
