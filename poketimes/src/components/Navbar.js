@@ -7,7 +7,7 @@ const Navbar = (props) => {
     //     props.history.push('/about.html');
     // },5000)
     return(
-        <nav className="nav-wrapper blue darken-4">
+        <nav className="nav-wrapper red darken-4">
             <div className="container">
                 <a className="brand-logo">Poke's Time</a>
                 <ul className="right">
