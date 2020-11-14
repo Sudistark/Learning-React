@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Learning-React/todoapp/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/Learning-React/todoapp/static/js/main.38a155a3.chunk.js",
+    "main.js.map": "/Learning-React/todoapp/static/js/main.38a155a3.chunk.js.map",
+    "runtime-main.js": "/Learning-React/todoapp/static/js/runtime-main.686ab736.js",
+    "runtime-main.js.map": "/Learning-React/todoapp/static/js/runtime-main.686ab736.js.map",
+    "static/js/2.f293178a.chunk.js": "/Learning-React/todoapp/static/js/2.f293178a.chunk.js",
+    "static/js/2.f293178a.chunk.js.map": "/Learning-React/todoapp/static/js/2.f293178a.chunk.js.map",
+    "index.html": "/Learning-React/todoapp/index.html",
+    "precache-manifest.35577bed8efab72b3d556b4b12a3582c.js": "/Learning-React/todoapp/precache-manifest.35577bed8efab72b3d556b4b12a3582c.js",
+    "service-worker.js": "/Learning-React/todoapp/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/Learning-React/todoapp/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.f293178a.chunk.js.LICENSE.txt": "/Learning-React/todoapp/static/js/2.f293178a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.686ab736.js",
+    "static/js/2.f293178a.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.38a155a3.chunk.js"
+  ]
+}
