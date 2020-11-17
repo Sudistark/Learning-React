@@ -26,9 +26,46 @@ class Home extends Component{
 
     // }
 
+    state = {
+        title: "",
+        body: ""
+    }
+
+
+    handleChange1 = (e) => {
+        console.log(e)
+        this.setState({
+            title: e.target.value
+        })
+
+    }
+
+    handleChange2 = (e) => {
+        this.setState({
+            body: e.target.value
+        })
+    }
+
+    handleClick = (e) => {
+        e.preventDefault();
+        this.setState({
+            title: "",
+            body:""
+        })
+
+        let nPost = {
+            title: this.state.title,
+            body: this.state.body,
+            id: Math.random()
+        }
+
+        this.props.addPost(nPost);
+
+    }
+
 
     render(){
-        console.log(this.props)
+        //console.log(this.props)
         const {posts} = this.props;
         const postLists = posts.length ? (
             posts.map(post => {
@@ -58,6 +95,16 @@ class Home extends Component{
             <div className="container home">
                 <h4 className="center">Home</h4>
                 {postLists}
+                <br/>
+                <div className="center">
+                    <form>
+                        <input type="text" onChange={this.handleChange1} value={this.state.title} placeholder="Title"/>
+                        <input type="text" onChange={this.handleChange2} value={this.state.body} placeholder="Body"/>
+                        <button className="btn grey" onClick={this.handleClick}>
+                            Add Post
+                        </button>
+                    </form>
+                </div>
             </div>
         )
     }
@@ -70,15 +117,15 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDsipactToProps = (dispatch) => {
-    return{
-        addPost: (id, title, body) => {
-            dispatch(addPost(id,title,body));
+const mapDsipatchToProps = (dispatch) => {
+     return{
+        addPost: (nPost) => {
+            dispatch(addPost(nPost));
         }
 
     }
 }
 
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps,mapDsipatchToProps)(Home);
 //first calling the connect function

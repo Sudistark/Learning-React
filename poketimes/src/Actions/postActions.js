@@ -5,9 +5,9 @@ export const deletePost = (id) => {
     }
 }
 
-export const addPost = () => {
+export const addPost = (nPost) => {
     return {
         type: 'Add_POST',
-        id: Math.random()
+        nPost 
     }
 }
