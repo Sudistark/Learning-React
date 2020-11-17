@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Pokeball from '../pokeball.png';
 import {connect} from 'react-redux';
+import {addPost} from '../Actions/postActions'
 
 
 class Home extends Component{
@@ -32,6 +33,8 @@ class Home extends Component{
         const postLists = posts.length ? (
             posts.map(post => {
                 return(
+                   
+                  <div className="Main">  
                     <div className="post card" key ={post.id}>
                         <img src={Pokeball} alt="A Pokeball! Gotta catch em' all!"/>
                         <div className="card-content">
@@ -41,6 +44,7 @@ class Home extends Component{
                             <p> {post.body}</p>
                         </div>
                     </div>
+                </div>
                 )
             })
 
@@ -66,6 +70,14 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDsipactToProps = (dispatch) => {
+    return{
+        addPost: (id, title, body) => {
+            dispatch(addPost(id,title,body));
+        }
+
+    }
+}
 
 
 export default connect(mapStateToProps)(Home);
